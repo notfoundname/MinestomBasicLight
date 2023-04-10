@@ -1,4 +1,4 @@
-package minestombasiclight;
+package me.waterdev.minestombasiclight;
 /*
  * Copyright Waterdev 2022, under the MIT License
  */
@@ -34,7 +34,9 @@ public class LightEngine {
 
     public void recalculateChunk(Chunk chunk) {
         exposed = new boolean[16][16];
-        exposed.forEach(e -> Arrays.fill(e, true));
+        for (boolean[] e : exposed) {
+            Arrays.fill(e, true);
+        }
         List<Section> sections = new ArrayList<>(chunk.getSections());
         Collections.reverse(sections);
         sections.forEach(this::recalculateSection);

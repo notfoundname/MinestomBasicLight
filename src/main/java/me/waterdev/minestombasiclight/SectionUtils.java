@@ -1,4 +1,4 @@
-package minestombasiclight;
+package me.waterdev.minestombasiclight;
 /*
  * Copyright Waterdev 2022, under the MIT License
  */
